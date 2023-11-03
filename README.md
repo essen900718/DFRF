@@ -1,3 +1,22 @@
+## Build Tips
+
+1. **pytorch3d install failed**: add `-c conda-forge` when installing pytorch, torchvision, and torchaudio
+2. **no ffmpeg found**: update ffmpeg
+
+```
+conda create --name dfrf python=3.8.11
+conda activate dfrf 
+conda install pytorch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 cudatoolkit=10.2 -c pytorch -c conda-forge
+conda install -c fvcore -c iopath -c conda-forge fvcore iopath
+conda install -c bottler nvidiacub
+conda install -c pytorch3d pytorch3d
+pip install -r requirements.txt
+pip install --ignore-installed PyYAML==5.4.1
+conda update ffmpeg
+```
+
+---
+
 # DFRF #
 The pytorch implementation for our ECCV2022 paper "Learning Dynamic Facial Radiance Fields for Few-Shot Talking Head Synthesis".
 
