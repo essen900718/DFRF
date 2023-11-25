@@ -2,6 +2,7 @@
 
 1. **pytorch3d install failed**: add `-c conda-forge` when installing pytorch, torchvision, and torchaudio
 2. **no ffmpeg found**: update ffmpeg
+3. **no track_params.pt**: check if pytorch3d is installed successfully
 
 ```
 conda create --name dfrf python=3.8.11
