@@ -1,0 +1,11 @@
+## process data
+sh process_data.sh $id
+
+## train
+sh run.sh $id
+
+## render with original audio
+sh rendering.sh
+
+## render with other sudio
+sh rendering_aud.sh
