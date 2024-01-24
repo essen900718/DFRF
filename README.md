@@ -1,4 +1,4 @@
-## Build Tips
+## 踩坑紀錄
 
 1. **pytorch3d install failed**: add `-c conda-forge` when installing pytorch, torchvision, and torchaudio
 2. **no ffmpeg found**: update ffmpeg
@@ -15,6 +15,8 @@ pip install -r requirements.txt
 pip install --ignore-installed PyYAML==5.4.1
 conda update ffmpeg
 ```
+
+**!!Note!!**: 生成的影片是沒有聲音的，需要自行配音；render只會render validation的資料(影片後1/11部分吧，沒記錯的話)，要render全部的話需要手動modify transforms_val.json；改輸入影片解析度感覺起來是不用重train base model(因為測試後效果差不多)，但可能會出現tensor shape不對的問題，pdb那一行會有問題，最後是把1024改成128(解析度改成450時)這樣勉強可以執行
 
 ---
 
