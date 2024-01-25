@@ -1,4 +1,4 @@
-## 踩坑紀錄
+## 踩坑日記
 
 1. **pytorch3d install failed**: add `-c conda-forge` when installing pytorch, torchvision, and torchaudio
 2. **no ffmpeg found**: update ffmpeg
